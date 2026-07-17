@@ -5,7 +5,7 @@ document.querySelector("#year").textContent = new Date().getFullYear();
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const email = new FormData(form).get("email");
-  message.textContent = `Thanks — we'll be in touch at ${email}.`;
+  const name = new FormData(form).get("name");
+  message.textContent = `Thank you, ${name}. A grandpal care coordinator will call you soon.`;
   form.reset();
 });
