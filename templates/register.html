@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | grandpal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='logo.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='register.css') }}" />
+  </head>
+  <body>
+    <div class="page-glow glow-one"></div><div class="page-glow glow-two"></div>
+    <header class="site-header container"><a class="logo" href="{{ url_for('home') }}"><span class="logo-mark">gp</span>grandpal<span>.care</span></a><a class="header-cta" href="{{ url_for('home') }}">Back to home <span>&rarr;</span></a></header>
+    <main class="register-page container">
+      <section class="register-copy"><p class="eyebrow"><span class="pulse-dot"></span> JOIN GRANDPAL CARE</p><h1>Support that feels<br /><em>close to home.</em></h1><p>Register for dependable 60+ support. We will use these details only to understand how we can help you best.</p><div class="price-note"><strong>₹12,000</strong><span>per year for everyday care and support</span></div></section>
+      <section class="registration-card">
+        {% if submitted %}
+          <div class="confirmation"><span>&#10003;</span><h2>Thank you, {{ full_name }}.</h2><p>Your registration has been received. A GrandPal care coordinator will be in touch soon.</p><a class="button primary" href="{{ url_for('register') }}">Register another person</a></div>
+        {% else %}
+          <h2>Register for care</h2><p class="form-intro">Please share a few details to get started.</p>
+          <form method="post" action="{{ url_for('register') }}"><div class="form-grid"><label>Full Name<input type="text" name="full_name" autocomplete="name" required /></label><label>Age<input type="number" name="age" min="60" max="130" required /></label><label>Phone Number<input type="tel" name="phone" autocomplete="tel" required /></label><label>Email<input type="email" name="email" autocomplete="email" required /></label><label class="full-width">Address<textarea name="address" rows="3" autocomplete="street-address" required></textarea></label><label>Emergency Contact Name<input type="text" name="emergency_name" required /></label><label>Emergency Contact Number<input type="tel" name="emergency_phone" required /></label></div><button class="button primary" type="submit">Complete registration <span>&rarr;</span></button></form>
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html>

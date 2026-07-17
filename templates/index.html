@@ -8,15 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="logo.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='logo.css') }}" />
   </head>
   <body>
     <div class="page-glow glow-one"></div><div class="page-glow glow-two"></div>
     <header class="site-header container">
       <a class="logo" href="#top" aria-label="grandpal home"><span class="logo-mark">gp</span>grandpal<span>.care</span></a>
-      <nav aria-label="Primary navigation"><a href="#services">Services</a><a href="#how-it-works">How it works</a><a href="#contact">Contact</a></nav>
-      <a class="header-cta" href="#contact">Get support <span>&rarr;</span></a>
+      <nav aria-label="Primary navigation"><a href="#services">Services</a><a href="#how-it-works">How it works</a><a href="#contact">Contact</a><a href="{{ url_for('register') }}">Register</a></nav>
+      <a class="header-cta" href="{{ url_for('register') }}">Register <span>&rarr;</span></a>
     </header>
 
     <main id="top">
@@ -52,6 +52,6 @@
     </main>
 
     <footer class="site-footer container"><a class="logo" href="#top"><span class="logo-mark">gp</span>grandpal<span>.care</span></a><p>Everyday care and support for 60+.</p><p>&copy; <span id="year"></span> grandpal</p></footer>
-    <script src="script.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
   </body>
 </html>
