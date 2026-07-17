@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="GranPal provides friendly, reliable everyday support for older adults and their families." />
-    <title>GranPal | Everyday support, made simple</title>
+    <title>Automated Deployment Demo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
@@ -24,12 +24,12 @@
     <main id="top">
       <section class="hero">
         <div class="hero-copy">
-          <p class="kicker">A helping hand, right when it matters</p>
-          <h1>More ease for every day.</h1>
-          <p class="hero-text">GranPal connects older adults with dependable help for rides, medical visits, errands, and the little things that make life feel more independent.</p>
+          <p class="kicker">Deployment made simple</p>
+          <h1>Automated Deployment using Codex &amp; GitHub Actions</h1>
+          <p class="hero-text">This website is automatically deployed to an AWS EC2 instance whenever code is pushed using Codex.</p>
           <div class="hero-actions">
-            <a class="button button-primary" href="#help">Book a service <span aria-hidden="true">&rarr;</span></a>
-            <a class="button button-quiet" href="#services">Explore services</a>
+            <a class="button button-primary" href="#pipeline">View Deployment <span aria-hidden="true">&rarr;</span></a>
+            <a class="button button-quiet" href="https://github.com/SumantharyaM/codex-demo" target="_blank" rel="noreferrer">GitHub Repository</a>
           </div>
           <div class="trust-row" aria-label="GranPal benefits">
             <span>Verified helpers</span><span>Family updates</span><span>Simple booking</span>
@@ -41,6 +41,25 @@
           <div class="care-card card-top"><span class="icon">&#10003;</span><div><strong>Ride confirmed</strong><small>Tuesday, 10:30 AM</small></div></div>
           <div class="portrait"><div class="hair"></div><div class="face"></div><div class="shirt"></div><div class="hand hand-left"></div><div class="hand hand-right"></div></div>
           <div class="care-card card-bottom"><span class="icon">&#9825;</span><div><strong>Medication reminder</strong><small>All taken care of</small></div></div>
+        </div>
+      </section>
+
+      <section class="pipeline section" id="pipeline">
+        <div class="pipeline-intro">
+          <p class="kicker">Deployment Pipeline</p>
+          <h2>From a change to a live website, automatically.</h2>
+          <p>This application demonstrates an automated CI/CD pipeline using Codex, GitHub, GitHub Actions, AWS EC2 and Nginx.</p>
+        </div>
+        <div class="pipeline-flow" aria-label="Deployment pipeline: Codex, GitHub, GitHub Actions, AWS EC2, Live Website">
+          <article class="pipeline-card"><span class="pipeline-icon">&#129302;</span><strong>Codex</strong><small>Build and update</small></article>
+          <span class="pipeline-arrow" aria-hidden="true">&darr;</span>
+          <article class="pipeline-card"><span class="pipeline-icon">&#128230;</span><strong>GitHub</strong><small>Version control</small></article>
+          <span class="pipeline-arrow" aria-hidden="true">&darr;</span>
+          <article class="pipeline-card"><span class="pipeline-icon">&#9881;</span><strong>GitHub Actions</strong><small>Run deployment</small></article>
+          <span class="pipeline-arrow" aria-hidden="true">&darr;</span>
+          <article class="pipeline-card"><span class="pipeline-icon">&#9729;</span><strong>AWS EC2</strong><small>Host the app</small></article>
+          <span class="pipeline-arrow" aria-hidden="true">&darr;</span>
+          <article class="pipeline-card live"><span class="pipeline-icon">&#127760;</span><strong>Live Website</strong><small>Available to visitors</small></article>
         </div>
       </section>
 
@@ -62,7 +81,7 @@
 
       <section class="help" id="help"><div><p class="kicker">Here when you need us</p><h2>Let&rsquo;s make today easier.</h2><p>Tell us what support would help, and we will be in touch to get it sorted.</p></div><form id="help-form"><label>Name<input name="name" type="text" placeholder="Your name" required /></label><label>What can we help with?<select name="service" required><option value="">Choose a service</option><option>Safe ride</option><option>Medical support</option><option>Everyday help</option><option>Something else</option></select></label><button class="button button-primary" type="submit">Request support <span aria-hidden="true">&rarr;</span></button><p id="form-message" aria-live="polite"></p></form></section>
     </main>
-    <footer class="site-footer"><a class="brand" href="#top"><span>G</span>GranPal</a><p>Everyday support, made more human.</p><p>&copy; <span id="year"></span> GranPal</p></footer>
+    <footer class="site-footer"><a class="brand" href="#top"><span>G</span>GranPal</a><p>Automatically deployed using GitHub Actions | Hosted on AWS EC2</p><p>&copy; <span id="year"></span> GranPal</p></footer>
     <script src="script.js"></script>
   </body>
 </html>
