@@ -3,85 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="GranPal provides friendly, reliable everyday support for older adults and their families." />
-    <title>Automated Deployment Demo</title>
+    <meta name="description" content="Automate reliable cloud deployments with AI-powered DevOps workflows." />
+    <title>DeployFlow AI | DevOps automation</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#top" aria-label="GranPal home"><span>G</span>GranPal</a>
-      <nav aria-label="Primary navigation">
-        <a href="#services">Services</a>
-        <a href="#how-it-works">How it works</a>
-        <a href="#family">For families</a>
-      </nav>
-      <a class="header-cta" href="#help">Get help today</a>
+    <div class="page-glow glow-one"></div><div class="page-glow glow-two"></div>
+    <header class="site-header container">
+      <a class="logo" href="#top" aria-label="DeployFlow AI home"><span class="logo-mark">&gt;_</span>deployflow<span>.ai</span></a>
+      <nav aria-label="Primary navigation"><a href="#platform">Platform</a><a href="#pipeline">Pipeline</a><a href="#contact">Contact</a></nav>
+      <a class="header-cta" href="#contact">Start deploying <span>&rarr;</span></a>
     </header>
 
     <main id="top">
-      <section class="hero">
-        <div class="hero-copy">
-          <p class="kicker">Deployment made simple</p>
-          <h1>Automated Deployment using Codex &amp; GitHub Actions</h1>
-          <p class="hero-text">This website is automatically deployed to an AWS EC2 instance whenever code is pushed using Codex.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#pipeline">View Deployment <span aria-hidden="true">&rarr;</span></a>
-            <a class="button button-quiet" href="https://github.com/SumantharyaM/codex-demo" target="_blank" rel="noreferrer">GitHub Repository</a>
-          </div>
-          <div class="trust-row" aria-label="GranPal benefits">
-            <span>Verified helpers</span><span>Family updates</span><span>Simple booking</span>
-          </div>
+      <section class="hero container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="pulse-dot"></span> AI-NATIVE DEVOPS AUTOMATION</p>
+          <h1>Ship with speed.<br /><em>Deploy with certainty.</em></h1>
+          <p class="hero-text">DeployFlow brings AI-powered development, continuous delivery, and cloud infrastructure into one effortless release pipeline.</p>
+          <div class="hero-actions"><a class="button primary" href="#pipeline">Explore the pipeline <span>&rarr;</span></a><a class="button secondary" href="#contact"><span class="play">&#9654;</span> Book a demo</a></div>
+          <div class="hero-proof"><div class="avatars"><span>J</span><span>A</span><span>M</span></div><p>Trusted by teams that value<br /><strong>calm, confident deployments.</strong></p></div>
         </div>
-        <div class="hero-visual" aria-label="Illustration of GranPal support">
-          <div class="sun"></div>
-          <div class="blob blob-one"></div><div class="blob blob-two"></div>
-          <div class="care-card card-top"><span class="icon">&#10003;</span><div><strong>Ride confirmed</strong><small>Tuesday, 10:30 AM</small></div></div>
-          <div class="portrait"><div class="hair"></div><div class="face"></div><div class="shirt"></div><div class="hand hand-left"></div><div class="hand hand-right"></div></div>
-          <div class="care-card card-bottom"><span class="icon">&#9825;</span><div><strong>Medication reminder</strong><small>All taken care of</small></div></div>
+        <div class="hero-terminal reveal" aria-label="Deployment status illustration">
+          <div class="terminal-top"><span></span><span></span><span></span><p>deployflow / production</p><b>LIVE</b></div>
+          <div class="terminal-body"><p><i>01</i><strong>$</strong> deployflow release --production</p><p><i>02</i><span class="muted">Analyzing repository changes...</span><b class="done">done</b></p><p><i>03</i><span class="muted">Generating deployment workflow...</span><b class="done">done</b></p><p><i>04</i><span class="muted">Provisioning secure cloud instance...</span><b class="done">done</b></p><p><i>05</i><span class="muted">Publishing build to Nginx...</span><b class="done">done</b></p><p class="success"><i>06</i> &#10003; Deployment complete <span>https://app.example.com</span></p></div>
+          <div class="terminal-status"><span class="status-dot"></span><p>Production is healthy</p><strong>99.99% uptime</strong></div>
         </div>
       </section>
 
-      <section class="pipeline section" id="pipeline">
-        <div class="pipeline-intro">
-          <p class="kicker">Deployment Pipeline</p>
-          <h2>From a change to a live website, automatically.</h2>
-          <p>This application demonstrates an automated CI/CD pipeline using Codex, GitHub, GitHub Actions, AWS EC2 and Nginx.</p>
-        </div>
-        <div class="pipeline-flow" aria-label="Deployment pipeline: Codex, GitHub, GitHub Actions, AWS EC2, Live Website">
-          <article class="pipeline-card"><span class="pipeline-icon">&#129302;</span><strong>Codex</strong><small>Build and update</small></article>
-          <span class="pipeline-arrow" aria-hidden="true">&darr;</span>
-          <article class="pipeline-card"><span class="pipeline-icon">&#128230;</span><strong>GitHub</strong><small>Version control</small></article>
-          <span class="pipeline-arrow" aria-hidden="true">&darr;</span>
-          <article class="pipeline-card"><span class="pipeline-icon">&#9881;</span><strong>GitHub Actions</strong><small>Run deployment</small></article>
-          <span class="pipeline-arrow" aria-hidden="true">&darr;</span>
-          <article class="pipeline-card"><span class="pipeline-icon">&#9729;</span><strong>AWS EC2</strong><small>Host the app</small></article>
-          <span class="pipeline-arrow" aria-hidden="true">&darr;</span>
-          <article class="pipeline-card live"><span class="pipeline-icon">&#127760;</span><strong>Live Website</strong><small>Available to visitors</small></article>
+      <section class="platform container" id="platform">
+        <div class="section-title reveal"><p class="eyebrow">YOUR MODERN DELIVERY STACK</p><h2>Everything your release needs.<br /><span>Nothing it doesn&rsquo;t.</span></h2></div>
+        <div class="tech-grid">
+          <article class="tech-card large reveal"><div class="tech-icon codex">&lt;/&gt;</div><p class="card-label">AI DEVELOPMENT</p><h3>Codex</h3><p>Turn ideas into production-ready changes with an AI collaborator that understands your codebase.</p><span class="card-link">AI-powered delivery &rarr;</span></article>
+          <article class="tech-card reveal"><div class="tech-icon github">&#9670;</div><p class="card-label">SOURCE CONTROL</p><h3>GitHub</h3><p>Every change is tracked, reviewed, and ready to move.</p></article>
+          <article class="tech-card reveal"><div class="tech-icon actions">&#9881;</div><p class="card-label">CONTINUOUS DELIVERY</p><h3>GitHub Actions</h3><p>Workflows orchestrate each release automatically.</p></article>
+          <article class="tech-card reveal"><div class="tech-icon aws">&#9729;</div><p class="card-label">CLOUD INFRASTRUCTURE</p><h3>AWS EC2</h3><p>Deploy secure, scalable workloads to the cloud.</p></article>
+          <article class="tech-card wide reveal"><div><p class="card-label">WEB DELIVERY</p><h3>Nginx</h3><p>Serve fast, reliable experiences with a battle-tested web server.</p></div><div class="nginx-mark">N</div></article>
         </div>
       </section>
 
-      <section class="services section" id="services">
-        <div class="section-heading"><p class="kicker">How we can help</p><h2>Support for the whole day, not just the appointment.</h2></div>
-        <div class="service-grid">
-          <article class="service-card"><div class="service-icon ride">&#128663;</div><h3>Safe rides</h3><p>Door-to-door rides for appointments, errands, visits, and more—with a friendly helper along the way.</p><a href="#help">Book a ride <span>&rarr;</span></a></article>
-          <article class="service-card featured"><div class="service-icon medical">&#10010;</div><h3>Medical support</h3><p>Appointment accompaniment, pharmacy pick-ups, reminders, and calm support when it matters most.</p><a href="#help">Arrange support <span>&rarr;</span></a></article>
-          <article class="service-card"><div class="service-icon home">&#10022;</div><h3>Everyday help</h3><p>Groceries, technology help, light errands, companionship, and practical support around the home.</p><a href="#help">See how we help <span>&rarr;</span></a></article>
-        </div>
-      </section>
+      <section class="pipeline" id="pipeline"><div class="container"><div class="pipeline-header reveal"><p class="eyebrow">A CLEAR PATH TO PRODUCTION</p><h2>From prompt to production.</h2><p>One intelligent, observable pipeline keeps your team in flow and your infrastructure in sync.</p></div><div class="flow reveal" aria-label="Deployment pipeline"><article><span class="flow-no">01</span><div class="flow-icon">&#129302;</div><h3>Build with Codex</h3><p>AI helps shape the change.</p></article><span class="flow-line"></span><article><span class="flow-no">02</span><div class="flow-icon">&#9670;</div><h3>Push to GitHub</h3><p>Commit with confidence.</p></article><span class="flow-line"></span><article><span class="flow-no">03</span><div class="flow-icon">&#9881;</div><h3>Actions deploy</h3><p>Automation takes over.</p></article><span class="flow-line"></span><article><span class="flow-no">04</span><div class="flow-icon">&#9729;</div><h3>EC2 goes live</h3><p>Nginx delivers it fast.</p></article></div></div></section>
 
-      <section class="how section" id="how-it-works">
-        <div class="how-illustration"><div class="route route-one"></div><div class="route route-two"></div><div class="pin pin-one">1</div><div class="pin pin-two">2</div><div class="pin pin-three">3</div><div class="map-label">Help is on the way</div></div>
-        <div class="how-copy"><p class="kicker">Simple from start to finish</p><h2>A little help is only three steps away.</h2><ol><li><span>01</span><div><h3>Tell us what you need</h3><p>Call us or submit a simple request online. We will listen and help plan the details.</p></div></li><li><span>02</span><div><h3>Meet your GranPal helper</h3><p>We match you with a vetted, caring helper who is ready to lend a hand.</p></div></li><li><span>03</span><div><h3>Feel supported</h3><p>Get on with your day with clear updates for you and the family members you choose.</p></div></li></ol></div>
-      </section>
-
-      <section class="family section" id="family"><div><p class="kicker">Peace of mind for families</p><h2>Close by, even when you are far away.</h2><p>Receive thoughtful updates after each visit, know who is helping, and stay connected without taking away your loved one&rsquo;s independence.</p><a class="text-link" href="#help">Learn about family updates &rarr;</a></div><div class="quote"><p>&ldquo;GranPal made Dad&rsquo;s first specialist appointment feel manageable for all of us.&rdquo;</p><footer><span class="avatar">M</span><div><strong>Maya, daughter of a GranPal member</strong><small>Member since 2024</small></div></footer></div></section>
-
-      <section class="help" id="help"><div><p class="kicker">Here when you need us</p><h2>Let&rsquo;s make today easier.</h2><p>Tell us what support would help, and we will be in touch to get it sorted.</p></div><form id="help-form"><label>Name<input name="name" type="text" placeholder="Your name" required /></label><label>What can we help with?<select name="service" required><option value="">Choose a service</option><option>Safe ride</option><option>Medical support</option><option>Everyday help</option><option>Something else</option></select></label><button class="button button-primary" type="submit">Request support <span aria-hidden="true">&rarr;</span></button><p id="form-message" aria-live="polite"></p></form></section>
+      <section class="contact container" id="contact"><div class="contact-copy reveal"><p class="eyebrow">READY WHEN YOU ARE</p><h2>Give your releases<br /><em>superpowers.</em></h2><p>See how an AI-native delivery workflow can turn every deployment into a non-event.</p><div class="contact-note"><span>&#10022;</span><p>No setup required for a conversation.<br />Just bring your next big idea.</p></div></div><form class="contact-form reveal" id="contact-form"><label>Work email<input type="email" name="email" placeholder="you@company.com" required /></label><label>What are you looking to automate?<select name="interest" required><option value="">Choose an option</option><option>Application deployments</option><option>Cloud infrastructure</option><option>CI/CD workflows</option><option>All of the above</option></select></label><button class="button primary" type="submit">Talk to an expert <span>&rarr;</span></button><p class="form-message" id="form-message" aria-live="polite"></p></form></section>
     </main>
-    <footer class="site-footer"><a class="brand" href="#top"><span>G</span>GranPal</a><p>Automatically deployed using GitHub Actions | Hosted on AWS EC2</p><p>&copy; <span id="year"></span> GranPal</p></footer>
+
+    <footer class="site-footer container"><a class="logo" href="#top"><span class="logo-mark">&gt;_</span>deployflow<span>.ai</span></a><p>AI DevOps automation for modern teams.</p><p>&copy; <span id="year"></span> DeployFlow AI</p></footer>
     <script src="script.js"></script>
   </body>
 </html>
