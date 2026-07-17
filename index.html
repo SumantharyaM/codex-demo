@@ -3,23 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A friendly greeting from Codex." />
-    <title>Codex DevOps Demo</title>
+    <meta name="description" content="GranPal provides friendly, reliable everyday support for older adults and their families." />
+    <title>GranPal | Everyday support, made simple</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main class="card">
-      <p class="eyebrow">A tiny static website</p>
-      <h1 id="greeting" aria-live="polite">metricinfo website</h1>
-      <p class="subtitle">A simple page with a little bit of interactivity.</p>
-      <button id="change-text" type="button">Deploy Again</button>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="GranPal home"><span>G</span>GranPal</a>
+      <nav aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#family">For families</a>
+      </nav>
+      <a class="header-cta" href="#help">Get help today</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker">A helping hand, right when it matters</p>
+          <h1>More ease for every day.</h1>
+          <p class="hero-text">GranPal connects older adults with dependable help for rides, medical visits, errands, and the little things that make life feel more independent.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#help">Book a service <span aria-hidden="true">&rarr;</span></a>
+            <a class="button button-quiet" href="#services">Explore services</a>
+          </div>
+          <div class="trust-row" aria-label="GranPal benefits">
+            <span>Verified helpers</span><span>Family updates</span><span>Simple booking</span>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Illustration of GranPal support">
+          <div class="sun"></div>
+          <div class="blob blob-one"></div><div class="blob blob-two"></div>
+          <div class="care-card card-top"><span class="icon">&#10003;</span><div><strong>Ride confirmed</strong><small>Tuesday, 10:30 AM</small></div></div>
+          <div class="portrait"><div class="hair"></div><div class="face"></div><div class="shirt"></div><div class="hand hand-left"></div><div class="hand hand-right"></div></div>
+          <div class="care-card card-bottom"><span class="icon">&#9825;</span><div><strong>Medication reminder</strong><small>All taken care of</small></div></div>
+        </div>
+      </section>
+
+      <section class="services section" id="services">
+        <div class="section-heading"><p class="kicker">How we can help</p><h2>Support for the whole day, not just the appointment.</h2></div>
+        <div class="service-grid">
+          <article class="service-card"><div class="service-icon ride">&#128663;</div><h3>Safe rides</h3><p>Door-to-door rides for appointments, errands, visits, and more—with a friendly helper along the way.</p><a href="#help">Book a ride <span>&rarr;</span></a></article>
+          <article class="service-card featured"><div class="service-icon medical">&#10010;</div><h3>Medical support</h3><p>Appointment accompaniment, pharmacy pick-ups, reminders, and calm support when it matters most.</p><a href="#help">Arrange support <span>&rarr;</span></a></article>
+          <article class="service-card"><div class="service-icon home">&#10022;</div><h3>Everyday help</h3><p>Groceries, technology help, light errands, companionship, and practical support around the home.</p><a href="#help">See how we help <span>&rarr;</span></a></article>
+        </div>
+      </section>
+
+      <section class="how section" id="how-it-works">
+        <div class="how-illustration"><div class="route route-one"></div><div class="route route-two"></div><div class="pin pin-one">1</div><div class="pin pin-two">2</div><div class="pin pin-three">3</div><div class="map-label">Help is on the way</div></div>
+        <div class="how-copy"><p class="kicker">Simple from start to finish</p><h2>A little help is only three steps away.</h2><ol><li><span>01</span><div><h3>Tell us what you need</h3><p>Call us or submit a simple request online. We will listen and help plan the details.</p></div></li><li><span>02</span><div><h3>Meet your GranPal helper</h3><p>We match you with a vetted, caring helper who is ready to lend a hand.</p></div></li><li><span>03</span><div><h3>Feel supported</h3><p>Get on with your day with clear updates for you and the family members you choose.</p></div></li></ol></div>
+      </section>
+
+      <section class="family section" id="family"><div><p class="kicker">Peace of mind for families</p><h2>Close by, even when you are far away.</h2><p>Receive thoughtful updates after each visit, know who is helping, and stay connected without taking away your loved one&rsquo;s independence.</p><a class="text-link" href="#help">Learn about family updates &rarr;</a></div><div class="quote"><p>&ldquo;GranPal made Dad&rsquo;s first specialist appointment feel manageable for all of us.&rdquo;</p><footer><span class="avatar">M</span><div><strong>Maya, daughter of a GranPal member</strong><small>Member since 2024</small></div></footer></div></section>
+
+      <section class="help" id="help"><div><p class="kicker">Here when you need us</p><h2>Let&rsquo;s make today easier.</h2><p>Tell us what support would help, and we will be in touch to get it sorted.</p></div><form id="help-form"><label>Name<input name="name" type="text" placeholder="Your name" required /></label><label>What can we help with?<select name="service" required><option value="">Choose a service</option><option>Safe ride</option><option>Medical support</option><option>Everyday help</option><option>Something else</option></select></label><button class="button button-primary" type="submit">Request support <span aria-hidden="true">&rarr;</span></button><p id="form-message" aria-live="polite"></p></form></section>
     </main>
+    <footer class="site-footer"><a class="brand" href="#top"><span>G</span>GranPal</a><p>Everyday support, made more human.</p><p>&copy; <span id="year"></span> GranPal</p></footer>
     <script src="script.js"></script>
   </body>
 </html>
